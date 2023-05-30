@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141d2f;
+}
+
+.devfinder {
+  display: flex;
+  min-width: 500px;
+  margin-bottom: 2rem;
+}
+.devfinder__contaier {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.devfinder__title {
+  color: #fff;
+  font-size: 44px;
+  padding-right: 150px;
+}
+
+.form {
+  padding-bottom: 2rem;
+}
+.form__btn {
+  background-color: #057bfb;
+  padding: 1rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+#search {
+  background-color: #1e2a47;
+  color: white;
+}
+
+.userinfo {
+  height: 500px;
+  width: 350px;
+  background-color: #1e2a47;
+  border-radius: 0.5rem;
+}
+.userinfo__name {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+  justify-content: center;
+}
+.userinfo__join {
+  color: #fff;
+  padding-bottom: 0.5rem;
+}
+.userinfo__bio {
+  color: #fff;
+}
+.userinfo__github {
+  display: flex;
+  color: #fff;
+  margin-left: 40px;
+  padding-top: 160px;
+  border-radius: 0.25rem;
+}
+.userinfo__repos, .userinfo__following, .userinfo__followers {
+  padding: 1rem;
+  background-color: #141c30;
+}
+.userinfo__handles {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  margin-left: 40px;
+  color: #fff;
+}
+.userinfo__location {
+  padding-bottom: 1rem;
+}
+.userinfo__twitter {
+  padding-bottom: 1rem;
+}
+.userinfo__link {
+  padding-bottom: 1rem;
+}/*# sourceMappingURL=styles.css.map */
