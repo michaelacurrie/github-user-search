@@ -30,25 +30,25 @@ const currentDay = "Wednesday"; //assume this is from an api
 //make api call when searchButton is clicked
 //Inject the necessary HtMl into the browser with te data from the API
 
-function removeElements() {
-  const elementsToRemove = document.querySelectorAll(".new__element");
-  console.log(elementsToRemove);
-  elementsToRemove.forEach((element) =>
-    element.parentNode.removeChild(element)
-  ); //loop through all the elements and remove
-}
+// function removeElements() {
+//   const elementsToRemove = document.querySelectorAll(".new__element");
+//   console.log(elementsToRemove);
+//   elementsToRemove.forEach((element) =>
+//     element.parentNode.removeChild(element)
+//   ); //loop through all the elements and remove
+// }
 
 function constructHTML(textValue, element, elementTag = "span") {
   const createdElement = document.createElement(elementTag); //create Element
   createdElement.classList.add("new__element"); //add a new class to the created element
   const text = document.createTextNode(textValue); //createText
   createdElement.append(text); //<span>randomne string</span>
-  console.log(element.children)
+  console.log(element.children);
   console.log(Array.isArray(Array.from(element.children))); //false
-  console.log(Array.isArray([])) //true
+  console.log(Array.isArray([])); //true
   Array.from(element.children).forEach((item) => {
-    if(item.classList.contains("new__element")) {
-      item.remove() //remove the element
+    if (item.classList.contains("new__element")) {
+      item.remove(); //remove the element
     }
   });
   element.append(createdElement);
@@ -56,10 +56,6 @@ function constructHTML(textValue, element, elementTag = "span") {
 // constructHTML("randomne string 1", userBlog); //<span>randomne string 1</span>
 // constructHTML("randomne string 2", userCompany, "div");//<span>randomne string 2</span>
 // constructHTML("randomne string 3", userTwitter, "p");//<p>randomne string 3</p>
-
-function test(arg = "empty gibebrriiifjfjfjf") {
-  console.log(arg);
-}
 
 // test()
 
@@ -76,16 +72,16 @@ formButton.addEventListener("click", (event) => {
       // repoSpan.append(reposText); //<span>16</span>
       // userRepos.append(repoSpan);
       // constructHTML(28, userRepos);
-      constructHTML(res.data.public_repos, userRepos);
-      constructHTML(res.data.followers, userFollowers);
-      constructHTML(res.data.following, userFollowing);
+      constructHTML(res.data.public_repos, userRepos, "p");
+      constructHTML(res.data.followers, userFollowers, "p");
+      constructHTML(res.data.following, userFollowing, "p");
       constructHTML(res.data.bio, userBio, "div");
       constructHTML(res.data.created_at, userJoin);
       constructHTML(res.data.name, userName);
       constructHTML(res.data.location, userLocation);
-      constructHTML(res.data.following, userFollowing);
-      constructHTML(res.data.following, userFollowing);
-      constructHTML(res.data.following, userFollowing);
+      // constructHTML(res.data.following, userFollowing);
+      // constructHTML(res.data.following, userFollowing);
+      // constructHTML(res.data.following, userFollowing);
       constructHTML(res.data.twitter_username, userTwitter);
       constructHTML(res.data.company, userCompany);
       constructHTML(res.data.blog, userBlog);
@@ -98,36 +94,3 @@ formButton.addEventListener("click", (event) => {
     })
     .catch((err) => console.log(err));
 });
-
-//  formButton.addEventListener('click',{
-
-//   console.log("hello");
-
-// axios
-//   .get("https://api.github.com/JayantGoel001")
-//   .then((res) => console.log(res))
-//   .catch((err) => console.log(err));
-//  })
-
-// userFunction () = (fetch(URL)
-//   .then((res) => res.json)
-//   .then((data) => console.log(data)));
-
-//   userFunction();
-
-// To add the username, I will need to create a new element <p>, append to username, and then info from API will be appended to the <p> tag.
-
-// const githubUser = document.createElement("p");
-// userName.append(githubUser);
-
-// githubUser.append(data.user);
-
-// githubUser.textContent(data.user);
-
-// API Information
-
-// "current_user_url": "https://api.github.com/user",
-// "emails_url": "https://api.github.com/user/emails"
-// "followers_url": "https://api.github.com/user/followers"
-// "following_url": "https://api.github.com/user/following{/target}"
-// "current_user_repositories_url": "https://api.github.com/user/repos{?type,page,per_page,sort}"
