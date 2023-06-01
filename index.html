@@ -14,62 +14,69 @@
     />
   </head>
   <body>
-    <header class="devfinder">
-      <!-- <div class="devfinder__container"> -->
-      <h1 class="devfinder__title">devfinder</h1>
-      <img src="./assets/icon-sun.svg" alt="sun icon" />
-      <!-- </div> -->
-    </header>
+    <main>
+      <header class="devfinder">
+        <!-- <div class="devfinder__container"> -->
+        <h1 class="devfinder__title">devfinder</h1>
+        <p class="devfinder__text">LIGHT</p>
+        <img src="./assets/icon-sun.svg" alt="sun icon" />
+        <!-- </div> -->
+      </header>
 
-    <!-- Question One: I have display flex on this class but the icon is squished? Why? -->
+      <!-- Question One: I have display flex on this class but the icon is squished? Why? -->
 
-    <form id="form" class="form">
-      <img src="./assets/icon-search.svg" alt="magnification glass icon" />
+      <div class="wrapper">
+        <form id="form" class="form">
+          <img src="./assets/icon-search.svg" alt="magnification glass icon" />
 
-      <input
-        type="text"
-        placeholder="Search GitHub Username"
-        id="search"
-        class="search"
-      />
+          <input
+            type="text"
+            placeholder="Search GitHub Username"
+            id="search"
+            class="search"
+          />
 
-      <button class="form__btn" id="form__btn">Search</button>
-    </form>
-
-    <!-- Question Two: Do the button and icon need to go inside of the placeholder? how -->
-
-    <section class="userinfo">
-      <div class="userinfo__img"></div>
-      <div class="userinfo__name"></div>
-      <div class="userinfo__join"></div>
-      <div class="userinfo__bio"></div>
-
-      <div class="userinfo__github">
-        <div class="userinfo__repos">Repos</div>
-
-        <div class="userinfo__followers">Followers</div>
-
-        <div class="userinfo__following">Following</div>
+          <button class="form__btn" id="form__btn">Search</button>
+        </form>
       </div>
 
-      <div class="userinfo__handles">
-        <div class="userinfo__handles-container">
-          <div class="userinfo__location handle">
-            <img src="./assets/icon-location.svg" alt="location icon" />
-            <p class="userinfo__location-text"></p>
-          </div>
-          <div class="userinfo__twitter handle">
-            <img src="./assets/icon-twitter.svg" alt="twitter icon" />
-          </div>
-          <div class="userinfo__blog handle">
-            <img src="./assets/icon-website.svg" alt="website icon" />
-          </div>
-          <div class="userinfo__company handle">
-            <img src="./assets/icon-company.svg" alt="company icon" />
+      <!-- Question Two: Do the button and icon need to go inside of the placeholder? how -->
+
+      <section class="userinfo">
+        <div class="userinfo__img"></div>
+        <div class="userinfo__name"></div>
+        <div class="userinfo__join"></div>
+        <div class="userinfo__bio"></div>
+
+        <div class="userinfo__github">
+          <div class="userinfo__github-container">
+            <div class="userinfo__repos">Repos</div>
+
+            <div class="userinfo__followers">Followers</div>
+
+            <div class="userinfo__following">Following</div>
           </div>
         </div>
-      </div>
-    </section>
+
+        <div class="userinfo__handles">
+          <div class="userinfo__handles-container">
+            <div class="userinfo__location handle">
+              <img src="./assets/icon-location.svg" alt="location icon" />
+              <p class="userinfo__location-text"></p>
+            </div>
+            <div class="userinfo__twitter handle">
+              <img src="./assets/icon-twitter.svg" alt="twitter icon" />
+            </div>
+            <div class="userinfo__blog handle">
+              <img src="./assets/icon-website.svg" alt="website icon" />
+            </div>
+            <div class="userinfo__company handle">
+              <img src="./assets/icon-company.svg" alt="company icon" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./JS/main.js" type="module"></script>
   </body>

@@ -1,15 +1,28 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: #141d2f;
 }
 
+main {
+  width: 80%;
+  margin: auto;
+}
+
 .devfinder {
   display: flex;
   min-width: 500px;
   margin-bottom: 2rem;
+}
+.devfinder__text {
+  font-size: 0.9375rem;
+  color: #fff;
+  padding-right: 0.25px;
+  font-family: sapcemono, heebo;
 }
 .devfinder__contaier {
   display: flex;
@@ -23,9 +36,14 @@ body {
   font-family: spacemono, heebo;
 }
 
+.wrapper {
+  background-color: mediumaquamarine;
+  border-radius: 4px;
+  width: 60%;
+}
+
 .form {
   padding-bottom: 2rem;
-  background-color: greenyellow;
 }
 .form__btn {
   background-color: #057bfb;
@@ -77,6 +95,10 @@ body {
   padding-top: 160px;
   border-radius: 0.25rem;
   border-color: pink;
+}
+.userinfo__github-container {
+  display: flex;
+  border-radius: 2px solid red;
 }
 .userinfo__repos, .userinfo__following, .userinfo__followers {
   padding: 1rem;
